@@ -1,0 +1,51 @@
+ul li {
+    list-style-type: none; float: left; margin-left: 20px;
+}
+ #side {
+   position: relative;
+   top: 20px;
+   left: 80px;
+   
+ }
+  
+  #contents { 
+  position: relative;
+   top: 60px;
+   left: 150px;
+  }
+
+  .my-box { 
+      position: relative;
+       width : 920px;
+       height: 80px;
+       padding : 10px;
+       border:1px solid;
+       top: 110px;
+       left: 120px;
+           }
+   
+   .aaa {
+       position: relative;
+       top: 150px;
+       left: 150px;
+   }
+   .bbb {
+       position: relative;
+       top: 150px;
+       left: 160px;
+   }
+
+   div.my-box div {
+       position: absolute;
+       top: 5px;
+       left: 700px;
+   }
+
+   .imgs_wrap {
+    left: -10px;
+    width: 600px;
+    margin-top: 50px;
+   }
+   .imgs_wrap img {
+     max-width: 100px; 
+   }

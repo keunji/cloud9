@@ -1,0 +1,401 @@
+
+/*---------------------------------전체 하단 div---------------------------------*/
+.Abox{
+    width: 1200px;
+    height: 700px;
+    border:1px solid rgb(216, 213, 213);
+    margin-right: 100px;
+    border-radius: 0.4em;
+    background-color: white;
+}
+
+.AContent {
+    height: 900px;
+    background-color: rgb(248, 248, 248);
+}
+
+.Atable{
+    width: 100%;
+    min-width: 1400px;
+    height: 100%;
+    padding: 100px 0 0 400px;
+   
+}
+
+.Abox div{
+    float: left;
+}
+
+/*---------------------------------왼쪽 오른쪽 div크기 설정---------------------------------*/
+.lContent{
+    height: 100%;
+    width: 300px;
+    border-right: 1px solid rgb(216, 213, 213);
+}
+
+.rContent{
+    height: 100%;
+    width: 890px;
+    padding: 71px 0 0 58px;
+}
+
+/*---------------------------------lContent설정--------------------------------- */
+li{
+    list-style: none;
+    height: 80px;
+}
+
+li.put{
+    background-color: rgba(27, 21, 21, 0.034);
+    border-left: 2px solid rgb(92, 160, 223);
+}
+
+li:hover{
+    background-color: rgba(27, 21, 21, 0.034);
+}
+
+.Ma{
+    text-decoration: none !important;
+    color: rgb(124, 123, 123);
+    margin-left: 40px;
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 350;
+}
+
+.Ma:hover{
+    text-decoration: none !important;
+    color: black;
+}
+
+
+.mainbtn{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.lmenu{
+    height: 500px;
+    width: 300px;
+}
+
+/*---------------------------------rContent 설정---------------------------------*/
+
+.MyInfo>div{
+    float: left;
+}
+
+/*프로필 사진 수정*/
+.profile{
+    margin-top: 60px;
+    margin-left: 60px;
+    zheight:300px;
+    width: 300px;
+}
+
+.photo{
+    min-width: 230px;
+    min-height: 200px;
+    border: 2px solid rgb(190, 190, 190);
+    margin: 20px 0 20px 30px ;
+    border-radius: 50%;
+    /* background-color: rgb(238, 238, 238); */
+}
+
+#btn-upload{
+   margin-left: 67px;
+   color: rgb(107, 105, 105); 
+   background-color: rgb(255, 255, 255);
+   border: 1.8px solid rgb(197, 197, 197);
+   border-radius: 0.5em;
+   height:38px;
+   cursor: pointer;
+   outline: none;
+   transition: 0.4s;
+}
+
+#btn-upload:hover{
+    background-color: rgba(233, 231, 231, 0.568);
+}
+
+#file { display:none; }
+
+#Myimg{
+    width: 230px;
+    height: 200PX;
+    border-radius: 50%;
+
+}
+/*------------------정보 수정------------------*/
+.ModifyInfo{
+    margin-top: 50px;
+    height: 75%;
+    width: 450px;
+}
+
+.Info{
+    margin: 30px 40px 0 30px; 
+    font-size: 19px;
+    color: rgb(107, 105, 105); 
+    font-weight: 400;
+    width: 450px;
+}
+
+.infoinput{
+    width: 300px;
+    height: 36px;
+    margin-left: 20px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 0.15em;
+}
+
+input, textarea:focus {outline:none;}
+
+.gender{
+    margin-left: 20px;
+    margin-right: 10px;
+    width:20px;height:20px;
+}
+
+/*------------------자기소개 설정------------------*/
+#inrtoduce{
+    width: 300px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 0.15em;
+    height: 100px;
+    resize: none;
+    margin-top: 30px;
+    position: absolute ;
+}
+
+.Info2{
+    margin: 30px 20px 0 30px; 
+    font-size: 19px;
+    font-weight: 500%;
+    position: relative;
+    width: fit-content;
+    height: 100px;
+    color: rgb(107, 105, 105); 
+    font-weight: 400;
+}
+
+/*------------------제출/탈퇴버튼------------------*/
+.Fbtn{
+    margin-top: 30px;
+    height: 70px;
+    width: 88%;
+    text-align: right;
+
+}
+
+.btns2{
+    height: 40px;
+    width: 100px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+
+#Sbtn{
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  background-color: rgb(50, 158, 230);
+  outline: none;
+  transition: 0.3s;
+}
+
+#Sbtn:hover{
+    background-color: rgb(92, 190, 255);
+    color: rgb(255, 255, 255);
+}
+
+#Delbtn{
+    color: rgb(50, 158, 230);
+    font-weight: 700;
+    margin-right: 500px;
+    background:none;
+    outline: none;
+    transition: 0.5s;
+}
+
+#Delbtn:hover{
+    background-color: rgb(231, 227, 227);
+}
+
+.address{
+    font-size:20px;
+    position: relative;
+    width: 619.8px;
+    height: 80%;
+  
+    border-left: 1px solid rgb(216, 213, 213);
+    border-bottom: 1px solid rgb(216, 213, 213);
+    border-right: 1px solid rgb(216, 213, 213);
+}
+.add_table{
+    width: 100%;
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+.userimg{
+    width: 60px;
+    height: 60px;
+    margin-right: 24px;
+}
+.imgtd{
+    padding: 0px 2px 0 50px;
+    height: 72px;
+}
+.friends{
+    width: 619.8px;
+    height: 0;
+    border-top: 1px solid rgb(216, 213, 213);
+    padding: 13px 0 0 57px;
+    border-left: 1px solid rgb(216,213,213);
+    border-right: 1px solid rgb(216,213,213);
+}
+.fsearch{
+    width: 400px;
+    margin-right: 14px;
+    margin-left: 19px;
+    border: 1px solid #c0bebef3;
+  
+}
+
+.fbtn{
+    width: 60px;
+    height: 29px;
+}
+/* .idtd{
+    width: 63%;
+    padding-top: 19px;
+} */
+.btntd{
+    padding-left: 78px;
+    margin: 0;
+}
+
+/* 팔로잉 */
+.button1{
+    border: 1px solid lightgray;
+    border-radius: 0.4em;
+    cursor: pointer;
+    color: gray;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #f5f5f5;
+    outline: none;
+    transition: 0.3s;
+    width: 75px;
+    height: 35px;
+}
+
+/* 팔로우 */
+.button2{
+    border: 1px solid rgb(50, 158, 230);
+    border-radius: 0.4em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 18px;
+    background-color: rgb(50, 158, 230);
+    outline: none;
+    transition: 0.3s;
+    width: 75px;
+    height: 35px;
+}
+
+/* 차단 */
+.button3{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.4em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #f85961;
+    outline: none;
+    transition: 0.3s;
+    width: 75px;
+    height: 35px;
+}
+
+.button4 {
+	border: 1px solid #f85961;
+    border-radius: 0.4em;
+    cursor: pointer;
+    color: #f85961;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    transition: 0.3s;
+    width: 75px;
+    height: 35px;
+}
+
+.tags{
+	margin:0;
+	padding:0;
+	right:24px;
+	bottom:-12px;
+	list-style:none;
+    }
+.tags li, .tags a{
+    float: left;
+    height: 42px;
+    line-height: 28px;
+    position: relative;
+    font-size: 26px;
+        }
+.tags a{
+    margin-left: 20px;
+    padding: 4px 12px 7px 16px;
+    background: #0089e0;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius-bottomright: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -webkit-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+        } 
+.tags a:before{
+    content: "";
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 0px;
+    height: 42px;
+    border-color: transparent #0089e0 transparent transparent;
+    border-style: solid;
+    border-width: 21px 12px 20px 0px;
+            }
+ .tags a:after{
+                content:"";
+                position:absolute;
+                top: 18px;
+                left:0;
+                float:left;
+                width:4px;
+                height:4px;
+                -moz-border-radius:2px;
+                -webkit-border-radius:2px;
+                border-radius:2px;
+                background:#fff;
+                -moz-box-shadow:-1px -1px 2px #004977;
+                -webkit-box-shadow:-1px -1px 2px #004977;
+                box-shadow:-1px -1px 2px #004977;
+                }
+ .tags a:hover{background:#555;}	
+
+.tags a:hover:before{border-color:transparent #555 transparent transparent;}
+.change_address{
+    position: absolute;
+    margin-left: 650px;
+    margin-top:20px;
+}

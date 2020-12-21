@@ -1,0 +1,71 @@
+.footer{
+    max-width: 1920px;
+    height: 200px;
+    bottom:0;
+    background-color: rgb(248, 248, 248);
+}
+
+.footer-div1{
+    width: 1600px;
+    height: 100px;
+    margin: 0px 162px;
+    border-top: 1px solid rgb(190, 190, 190);
+}
+
+.footer-phone{
+    width: 800px;
+    height: 110px;
+    float: left;
+}
+
+.footer-email{
+    width: 800px;
+    height: 110px;
+    float: left;
+}
+
+.phone-p, .email-p{
+    width: 600px;
+    height: 30px;
+    font-size: 16px;
+    margin: 13px 70px 0px;
+}
+
+.phone-number, .email-email{
+    height: 60px;
+    font-size: 30px;
+    font-weight: 400;
+    margin:  0px 0px 0px 70px;
+    float: left;
+}
+
+.phone-time{
+    float: left;
+    margin: 15px 0px 0px 12px;
+}
+
+.footer-div2{
+    width: 1600px;
+    height: 70px;
+    margin: 0px 162px;
+}
+
+.footer-info{
+    width: 1470px;
+    height: 50px;
+    position: absolute;
+    margin: 10px 64px;
+    background-color: rgb(238, 238, 238);
+}
+
+.info-name, .info-address, .info-boss{
+    height: 40px;
+    float: left;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 11px 0px 10px;
+}
+
+
+
+

@@ -1,0 +1,112 @@
+
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body{
+            background-color: rgb(248, 248, 248);
+        }
+
+        /* 위로가기 버튼 */
+        .upBtn{
+            position: fixed;
+            margin: 750px 0px 0px 1612px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(201, 201, 201, 0.514);
+            cursor: pointer;
+        }
+
+        .upBtn img{
+            width: 25px;
+            height: 25px;
+            margin: 7px 8.5px;
+        }
+
+        /* 사용자 검색 구역 */
+        .userSection{
+            width: 1920px;
+            min-width: 1400px;
+        }
+
+        .userInfo{
+            padding-top: 78px;
+            height: 60px;
+        }
+
+        .suser{
+            float: left;
+            font-size: 30px;
+            font-weight: 500;
+            color: black;
+            margin-left: 400px;
+        }
+
+        .suserMore{
+            float: left;
+            margin: 15px 15px 0px;
+        }
+
+        /* 사용자 테이블 */
+        .userTable{
+            padding: 12px 386px;
+        }
+        
+        .infoDiv{
+            position: relative;
+            width: 540px;
+            height: 90px;
+            border-radius: 8px 8px;
+            border:1px solid rgb(216, 213, 213);
+            background: white;
+            margin: 12px;
+        }
+
+        .uImg{
+            width: 65px;
+            height: 65px;
+            float: left;
+            border: 1px solid rgb(190, 190, 190);
+            border-radius: 50%;
+            background: gray;
+            margin: 12px 20px;
+            overflow: hidden;
+        }
+
+        .uImg img{
+            width: 67px;
+            height: 67px;
+            border-radius: 50%;
+            margin: -1px;
+        }
+
+        .uName{
+            float: left;
+            margin: 17px 0px;
+            width: 360px;
+        }
+
+        .uName .uid{
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        .uName .uname{
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        .follow{
+            float: left;
+            width: 50px;
+            margin: 32px 20px 32px 0px;
+        }
+
+
+
+
+
+
+
+

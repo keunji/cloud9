@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+	
+	<!-- typeAliases -->
+	<typeAliases>
+		<typeAlias type="com.kh.lml.member.model.vo.Member" alias="Member"/>
+		<typeAlias type="com.kh.lml.board.model.vo.Board" alias="Board"/>
+		<typeAlias type="com.kh.lml.member.model.vo.ChatRoom" alias="ChatRoom"/>
+		<typeAlias type="com.kh.lml.member.model.vo.ChatLog" alias="Chatlog"/>
+		<typeAlias type="com.kh.lml.board.model.vo.Comment" alias="Comment"/>
+		<typeAlias type="com.kh.lml.qna.vo.qnaBoard" alias="qnaBoard"/>
+		<typeAlias type="com.kh.lml.qna.vo.qnaComment" alias="qnaComment"/>
+		
+	</typeAliases>
+	
+	<!-- environments 엘리먼트로 dataSource 등의 DB정보들을 작성했었다.
+	     => 스프링에서는 그정보를 여기서는 안쓴다.
+	     root-context.xml에 작성하게된다.(DataSource 등록은 서버 연동과 같이 이루어져야하기때문에) 
+	-->
+	
+	<mappers>
+		<mapper resource="mappers/member-mapper.xml"/>
+		<mapper resource="mappers/board-mapper.xml"/>
+		<mapper resource="mappers/jm-board-mapper.xml"/>
+		<mapper resource="mappers/qnaBoardMapper.xml"/>
+	</mappers>
+</configuration>

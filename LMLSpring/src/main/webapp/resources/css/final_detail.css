@@ -1,0 +1,389 @@
+.myModal {
+    /* display: none; Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 15; /*Sit on top*/
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.781); /* Fallback color */
+}
+
+a{
+    color:#000;
+}
+
+a:hover{
+    color:#000;
+}
+
+
+.board-detail{
+    width: 955px;
+    height: 850px;
+    background-color: white;
+    position: absolute;
+    left: 450px;
+    top: 25px;
+}
+
+/* 사진 */
+.board-img{
+    width: 600px;
+    height: 600px;
+    background-color: lightgray;
+    position: absolute;
+}
+
+.board-img img{
+    width: 600px;
+    height: 600px;
+}
+
+/* right 글, 옷정보 */
+.board-right{
+    width: 355px;
+    height: 850px;
+    position: absolute;
+    margin: 0px 0px 0px 600px;
+}
+
+.board-user{
+    width: 355px;
+    height: 80px;
+    border-bottom: 1px solid  rgb(216, 213, 213);
+}
+
+.board-userImg{
+    width: 55px;
+    height: 55px;
+    float: left;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 50%;
+    background: gray;
+    margin: 13px 14px;
+    overflow: hidden;
+}
+
+.board-userImg img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin: -1px;
+    cursor: pointer;
+}
+
+.board-id{
+    width: 200px;
+    height: 80px;
+    float: left;
+    padding: 24px 0px;
+}
+
+.board-id p{
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.board-follow{
+    width: 60px;
+    height: 80px;
+    float: left;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 23px 8px 23px 0px;
+    cursor: pointer;
+    color: lightslategrey;
+}
+
+.board-textDiv{
+    width: 355px;
+    height: 345px;
+    border-bottom: 1px solid  rgb(216, 213, 213);
+}
+
+.board-text{
+    width: 335px;
+    height: 267px;
+    position: absolute;
+    margin: 10px 10px 0px;
+}
+
+.board-hashtag{
+    width: 328px;
+    height: fit-content;
+    position: absolute;
+    margin: 264px 14px 8px;
+    color: rgb(0, 46, 83);
+    /* background: orange; */
+    font-weight: 300;
+}
+.board-Usertag{
+    width: 328px;
+    height: 34px;
+    font-size: large;
+    position: absolute;
+    margin: 306px 14px 8px;
+    color: rgb(0, 46, 83);
+    font-weight: 300;
+    
+}
+
+
+
+
+
+
+
+
+
+
+.board-stateicon{
+    width: 355px;
+    height: 53px;
+    border-bottom: 1px solid  rgb(216, 213, 213);
+}
+
+.board-heartCount{
+    width: 200px;
+    height: 27px;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 13px 0px 13px 11px;
+    float: left;
+}
+
+.board-heart{
+    width: 25px;
+    height: 25px;
+    margin: 14px 0px 13px 72px;
+    float: left;
+}
+
+.board-heart img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.board-etc{
+    width: 25px;
+    height: 25px;
+    margin: 14px 2px 13px 12px;
+    float: left;
+    cursor:pointer;
+}
+
+.board-etc img{
+    width: 22px;
+    height: 23px;
+}
+
+.boardSub{
+    position: absolute;
+    right: 20px;
+    top: 469px;
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+    border-radius: 4px;
+    box-shadow: 0px 0px 11px rgb(220,220,220);
+}
+
+.boardSub li{
+    list-style-type:none;
+    height: 30px;
+    font-size: 15px;
+    cursor:pointer; 
+    text-align: center;
+}
+
+.boardSub1{
+    margin: 3px 5px 3px 5px;
+    color: rgb(94, 94, 94);
+}
+
+.boardSub li:hover{
+    background-color: rgba(238, 238, 238, 0.699);
+}
+
+.boardSub a{
+    text-decoration: none;
+}
+
+
+
+
+/* 옷정보 */
+.board-clothesInfo{
+    width: 355px;
+    height: 345px;
+}
+
+.clothesInfo-div{
+    width: 355px;
+    height: 70px;
+}
+
+.clothes-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 3px 3px;
+    margin: 19px 0px 0px 15px;
+    float: left;
+    position: absolute;
+    background: rgb(236, 236, 236);
+}
+
+.clothes-img img{
+    width: 40px;
+    height: 40px;
+    margin: 5px 6px;
+}
+
+.clothes-p{
+    width: 50px;
+    height: 30px;
+    float: left;
+    position: absolute;
+    margin: 18px 78px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.clothes-info{
+    width: 180px;
+    height: 30px;
+    position: absolute;
+    margin: 40px 78px;
+    font-weight: 400;
+    cursor:pointer;
+}
+
+
+/* bottom 댓글 */
+.board-bottom{
+    width: 600px;
+    height: 250px;
+    position: absolute;
+    margin: 600px 0px 0px 0px;
+    border-right: 1px solid  rgb(216, 213, 213);
+}
+
+.commentCount{
+    width: 600px;
+    height: 30px;
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+
+.commentCount p{
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0px 0px 0px 10px;
+    padding-top: 3px;
+}
+
+.board-commentDiv{
+    width: 600px;
+    height: 160px;
+    overflow: auto;
+    border-bottom: 1px solid  rgb(216, 213, 213);
+}
+
+.board-bottom ::-webkit-scrollbar { display: none; }
+
+.board-comment{
+    height: 45px;
+    width: 570px;
+    margin: 0px 14px;
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.comment-img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: gray;
+    border: 1px solid rgb(190, 190, 190);
+    float: left;
+    margin: 6px 12px 5px 2px;
+}
+
+.comment-img img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.comment-content{
+    width: 515px;
+    height: 37px;
+    margin: 4px 0px;
+    float: left;
+}
+
+.comment-user{
+    float: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.comment-comment{
+    float: left;
+    width: 440px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 10px;
+    overflow: auto;
+}
+
+.board-commentWrite{
+    width: 650px;
+    height: 60px;
+}
+
+
+.comment-delete{
+	float: left;
+    width: 25px;
+    height: 25px;
+    margin-top: 11px;
+}
+
+.comment-delete img{
+	float: left;
+    width: 15px;
+    height: 15px;
+    cursor:pointer;
+}
+
+
+.comment-write{
+    width: 520px;
+    height: 60px;
+    overflow: auto;
+    float: left;
+}
+
+.comment-write input{
+    border: 0px;
+    width: 515px;
+    height: 44px;
+    margin: 8px 2px;
+    padding-left: 20px;
+}
+
+input:focus {outline:none;}
+
+.comment-submit{
+    width: 35px;
+    height: 31px;
+    float: left;
+    margin: 15px 22px;
+    text-align: center;
+    font-weight: 400;
+    color: lightslategrey;
+    cursor: pointer;
+}

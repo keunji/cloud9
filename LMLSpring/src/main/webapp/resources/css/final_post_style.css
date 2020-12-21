@@ -1,0 +1,331 @@
+section {
+	height: 1000px;
+}
+
+/*---------------------------------전체 하단 div---------------------------------*/
+.AContent {
+	height: 100%;
+	background-color: rgb(248, 248, 248);
+}
+
+.uploadBtn {
+	margin: 100px 20px 0px 0px;
+	float: right;
+	width: 85px;
+	height: 37px;
+	border: 0px;
+	background: rgb(51, 176, 218);
+	font-weight: bold;
+	color: white;
+	font-size: 18px;
+	cursor:pointer;
+}
+
+.uploadBtn1 {
+	margin: 100px 256px 0px 0px;
+	float: right;
+	width: 85px;
+	height: 37px;
+	border: 0px;
+	background: rgb(51, 176, 218);
+	font-weight: bold;
+	color: white;
+	font-size: 18px;
+	cursor:pointer;
+}
+
+.deleteBtn {
+	margin: 100px 270px 0px 0px;
+	float: right;
+	width: 85px;
+	height: 37px;
+	border: 0px;
+	background: gray;
+	font-weight: bold;
+	color: white;
+	font-size: 18px;
+	cursor:pointer;
+}
+
+.Atable {
+	width: 100%;
+	min-width: 1400px;
+	height: 100%;
+	padding: 150px 0 0 250px;
+}
+
+.Abox {
+	width: 1400px;
+	height: 850px;
+	border: 1px solid rgb(216, 213, 213);
+	border-radius: 0.4em;
+	background-color: white;
+}
+
+.post-div {
+	width: 1350px;
+	height: 750px;
+	margin: 10px 24px;
+}
+
+.div-img, .div-cont, .div-tag {
+	width: 1350px;
+	height: 250px;
+	
+}
+
+.post-img {
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	margin: 10px;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgb(83, 83, 83);
+}
+
+.post-img-div {
+	width: 1350px;
+	height: 199px;
+	position: absolute;
+	margin-top: 50px;
+	float: left;
+	/* background: lightblue; */
+}
+
+.img-upload1 {
+	width: 180px;
+	height: 180px;
+	float: left;
+	cursor: pointer;
+	margin-right: 15px;
+	background: rgb(238, 238, 238);
+}
+
+.img-upload-icon {
+	width: 60px;
+	height: 60px;
+	margin: 60px;
+	float: left;
+}
+
+.uploadImg {
+	display: none;
+	position: absolute;
+	float: left;
+}
+
+.img-preview {
+	width: 1155px;
+	height: 180px;
+	float: left;
+}
+
+.preview {
+	width: 180px;
+	height: 180px;
+	float: left;
+	margin-right: 15px;
+}
+
+.post-cont {
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	margin: 10px;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgb(83, 83, 83);
+	position: relative;
+}
+
+.cont-write textarea {
+	width: 1350px;
+	height: 190px;
+	border: 1px solid rgb(218, 218, 218);
+	padding: 20px;
+	overflow: auto;
+	resize: none;
+}
+
+textarea:focus, select:focus, input:focus, button:focus {
+	outline: none;
+}
+
+.post-tag {
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	margin: 10px;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgb(83, 83, 83);
+}
+
+.post-tag-div {
+	width: 1350px;
+	height: 160px;
+	position: absolute;
+	margin-top: 50px;
+}
+
+.tag-select {
+	margin-left: 10px;
+	float: left;
+}
+
+.styleTag {
+	width: 150px;
+	height: 50px;
+	border: 1px solid rgb(201, 201, 201);
+	border-radius: 4px;
+	padding-left: 10px;
+}
+
+.styleTagBtn {
+	width: 70px;
+	height: 35px;
+	border: 0px;
+	cursor: pointer;
+	background: rgb(236, 236, 236);
+	border-radius: 10px;
+	font-weight: 400;
+	color: black;
+}
+.styleTagBtn:focus{
+	outline: none;
+}
+
+.tagArea {
+	width: 1328px;
+	height: 158px;
+	float: left;
+	overflow: hidden;
+}
+
+.tag {
+	height: 50px;
+	background: white;
+	border: 1px solid rgb(212, 212, 212);
+	margin-right: 10px;
+	margin-top: 20px;
+	float: left;
+	padding: 10px 10px;
+	border-radius: 30px 30px;
+}
+
+.tag p, .tag .deleteStyleTag {
+	float: left;
+	margin-left: 18px;
+	font-size: 17px;
+}
+
+.brand {
+	font-weight: 400;
+	margin-right: 5px;
+}
+
+.deleteStyleTag {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	margin: 2px 0px;
+}
+
+.deleteStyleTag img {
+	width: 15px;
+	height: 15px;
+	margin-top: -5px;
+}
+
+/*태그 css*/
+ul {
+	padding: 16px 0;
+	list-style: none;
+}
+
+ul li {
+	display: inline-block;
+	margin: 0 5px;
+	font-size: 14px;
+	letter-spacing: -.5px;
+	list-style: none;
+}
+
+ul li.tag-item {
+	padding: 4px 8px;
+	background-color: #777;
+	color: #000;
+}
+
+.tag-item:hover {
+	background-color: #262626;
+	color: #fff;
+}
+
+.del-btn {
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 8px;
+}
+
+}
+.post-cont-div1 {
+padding-top: 25px;
+    padding-left: 20px;
+}
+
+
+.post-cont-div2 {
+ padding-top: 25px;
+    padding-left: 20px;
+}
+.tagbtn{
+	    position: absolute;
+    margin: 0 0px 0px 149px;
+    padding-bottom: 2px;
+    width: 85px;
+    height: 45px;
+    border: 0px;
+    cursor: pointer;
+    background: rgb(236, 236, 236);
+    border-radius: 10px;
+    font-weight: 400;
+    color: black;
+}
+.tagbtn:hover{
+	border:1px solid #c0c0c0;
+	background: none;
+}
+.tagbtn:focus{
+	outline: none;
+}
+
+
+.tagtag{
+       height: 35px;
+    width: 136px;
+    position: absolute;
+    border: 0;
+    margin-right: 2px;
+    border-bottom: 1px solid #554f4f;
+    margin-bottom: 13px;
+
+}
+
+.userTagDiv{
+	height: 30px;
+}
+
+.userTagDiv img{
+	width:20px;
+	height:20px;
+	cursor:pointer;
+}
+
+.img-upload-update {
+	width: 180px;
+	height: 180px;
+	float: left;
+}

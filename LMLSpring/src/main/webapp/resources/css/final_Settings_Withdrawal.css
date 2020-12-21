@@ -1,0 +1,137 @@
+.Abox{
+    width: 1200px;
+    height: 700px;
+    border:1px solid rgb(216, 213, 213);
+    margin-right: 100px;
+    border-radius: 0.4em;
+    background-color: white;
+}
+
+.AContent {
+    height: 900px;
+    background-color: rgb(248, 248, 248);
+}
+
+.Atable{
+    width: 100%;
+    min-width: 1400px;
+    height: 100%;
+    padding: 100px 0 0 400px;
+   
+}
+
+.Abox div{
+    float: left;
+}
+.lContent{
+    height: 100%;
+    width: 300px;
+    border-right: 1px solid rgb(216, 213, 213);
+}
+
+.rContent{
+    height: 100%;
+    width: 890px;
+}
+
+li{
+    list-style: none;
+    height: 80px;
+    transition:0.2s all;
+}
+
+
+li.put{
+    background-color: rgba(27, 21, 21, 0.034);
+    border-left: 2px solid rgb(92, 160, 223);
+}
+
+li:hover{
+    background-color: rgba(27, 21, 21, 0.034);
+}
+.Ma{
+    text-decoration: none !important;
+    color: rgb(124, 123, 123);
+    margin-left: 40px;
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 350;
+
+}
+
+.Ma:hover{
+    text-decoration: none !important;
+    color: black;
+}
+
+.mainbtn{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+
+.lmenu{
+    height: 500px;
+    width: 300px;
+}
+
+.Withdraw_input_container{
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.withdraw_input{
+    width: 350px;
+    height: 39px;
+    margin-left: 30px;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 0.15em;
+}
+
+.With{
+    width:100%;
+    font-weight: 400;
+    color: rgb(107, 105, 105); 
+    font-size: 23px;
+}
+
+.Email{
+    margin: 100px 20px 20px 217px;
+}
+
+.Id{
+    margin: 0px 20px 30px 217px;
+}
+
+.PWD{
+    margin: -1px 20px 10px 196px;
+}
+
+.withdrawal_btn_container{
+    width: 100%;
+    text-align: right;
+}
+
+.withdrawal{
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    margin: 30px 50px 0 0 ;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    background-color: rgb(50, 158, 230);
+    outline: none;
+    transition: 0.3s;
+}
+
+.withdrawal:hover{
+    background-color: rgb(92, 190, 255);
+    color: rgb(255, 255, 255);
+}
+
+input{outline: none;}

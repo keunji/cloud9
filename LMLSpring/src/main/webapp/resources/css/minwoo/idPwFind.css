@@ -1,0 +1,179 @@
+@charset "UTF-8";
+ #mainbox{
+    background-color: rgb(248, 248, 248);
+    border: 1px solid lavender;
+    width: 1100px;
+    height: 800px;
+    margin: 0px auto;
+    padding-top: 100px;
+} 
+.hidden{
+    display: none;
+}
+#selectbox{
+    border-bottom: 1px solid lavender;
+}
+
+.idpwbutton{
+    display: inline-block;
+    width: 547px;
+    height: 50px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    cursor: pointer;
+}   
+#idbutton{
+    border-right: 1px solid lavender;
+    padding-top: 4px;
+}
+#pwbutton{
+    padding-top: 4px;
+}
+#findtitlename{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bolder;
+    margin: 10px 0px;
+}
+.findbutton{
+    width: 360px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 23px;
+    padding-left: 5px;
+    font-size: 15px;
+    margin: 40px auto;
+    cursor: pointer;
+    font-family: '돋움',Dotum,AppleGothic,sans-serif;
+    font-weight: 500;
+    box-shadow: 5px 5px 5px;
+}
+.findbutton:hover{
+    background-color: lightslategrey;
+}
+.findbutton:active{
+    background-color: royalblue;
+}
+
+.nextimg{
+    width: 20px;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+}
+
+/*이름,핸드폰번호로 찾기*/
+.findcenter{
+    display: block;
+    width: 400px;
+    margin: 0px auto;
+}
+ #findPhonenumberWindow>form>p{
+    font-size: 15px;
+    font-family: '돋움',Dotum,AppleGothic,sans-serif;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+#findPhonenumberWindow>form>#findName{
+    width: 230px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 15px;
+    display: inline-block;
+}
+#findPhonenumberWindow>form>#findPhonenumber{
+    width: 230px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 15px;
+}
+#findPhonenumberWindow>form>#submit{
+    border-radius: 20px;
+    width: 80px;
+    margin-left: 255px;
+}
+#findPhonenumberWindow>form>#submit:hover{
+    background-color: lightslategrey;
+}
+#findPhonenumberWindow>form>#submit:active{
+    background-color: royalblue;
+}
+
+/*이름,이메일로 찾기*/
+#findEmailWindow>form {
+    display: block;
+    width: 400px;
+    margin: 0px auto;
+}
+#findEmailWindow>form>p{
+    font-size: 15px;
+    font-family: '돋움',Dotum,AppleGothic,sans-serif;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+#findEmailWindow #findName{
+    width: 230px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 15px;
+    display: inline-block;
+}
+#findEmailWindow #findEmail{
+    width: 230px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 15px;
+}
+#findEmailWindow>form>#submit{
+    border-radius: 20px;
+    width: 80px;
+    margin-left: 255px;
+}
+#findEmailWindow>form>#submit:hover{
+    background-color: lightslategrey;
+}
+#findEmailWindow>form>#submit:active{
+    background-color: royalblue;
+}
+
+/*아이디,이메일로 찾기*/
+#findPwIdEmailWindow>form{
+    display: block;
+    width: 400px;
+    margin: 0px auto;
+}
+#findPwIdEmailWindow>form>p{
+    font-size: 15px;
+    font-family: '돋움',Dotum,AppleGothic,sans-serif;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+#findPwIdEmailWindow #findID{
+    width: 230px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 15px;
+    display: inline-block;
+}
+#findPwIdEmailWindow #findEmail{
+    width: 230px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 15px;
+}
+#findPwIdEmailWindow>form>#submit{
+    border-radius: 20px;
+    width: 80px;
+    margin-left: 255px;
+}
+#findPwIdEmailWindow>form>#submit:hover{
+    background-color: lightslategrey;
+}
+#findPwIdEmailWindow>form>#submit:active{
+    background-color: royalblue;
+}

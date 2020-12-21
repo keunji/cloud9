@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*해당 아이디가 생기면 슬라이드를 옆으로 이동 시킴*/
+#num1{margin-left: 0px;}
+#num2{margin-left: -600px;}
+#num3{margin-left: -1200px;}
+#num4{margin-left: -1800px;}
+#num5{margin-left: -2400px;}
+/*버튼 위치*/
+#prev{position: absolute; width: 50px; height: auto; transform: rotate(180deg); top: 260px; z-index: 1;}
+#next{position: absolute; right: 0; width: 50px; height: auto; top: 260px;z-index: 1;}
+/*슬라이드 크기 지정*/
+.slide{overflow:hidden;position: absolute; width: 600px; height: 600px;}
+.board-img{display:flex;}
+.board-img img{list-style:none;}

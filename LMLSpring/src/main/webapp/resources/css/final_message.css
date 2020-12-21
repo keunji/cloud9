@@ -1,0 +1,296 @@
+section {
+	background-color: rgb(248, 248, 248);
+	height: 900px;
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	color: #000;
+}
+
+.aTable {
+	width: 1920px;
+	min-width: 1400px;
+	height: 100%;
+	padding: 120px 361px;
+}
+
+.aBox {
+	width: 1200px;
+	height: 700px;
+	border: 1px solid rgb(216, 213, 213);
+	border-radius: 0.4em;
+	background-color: white;
+}
+
+.aBox>div {
+	float: left;
+}
+.delbtn{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    /* float: right; */
+    margin: 10px 0px 19px 35px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    opacity: 1px;
+    color: #e4e4e4;
+    cursor: pointer;
+    background: white;
+}
+
+.delbtn:hover{
+color: #787878;
+
+}
+
+.delbtn:focus{
+	outline: none;
+}
+
+
+.lContent {
+	height: 100%;
+	width: 300px;
+	border-right: 1px solid rgb(216, 213, 213);
+}
+
+.rContent {
+	height: 100%;
+	width: 890px;
+}
+
+/* 왼쪽 메뉴 */
+.direct-div {
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid rgb(216, 213, 213);
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+	padding: 19px 0px;
+}
+
+.direct-user-div {
+	width: 100%;
+	height: 628px;
+	overflow: scroll;
+}
+
+.direct-user:hover {
+	border-left: 1px solid rgb(189, 189, 189);
+}
+
+.direct-user {
+	width: 100%;
+	height: 90px;
+	border: 1px solid white;
+}
+
+.select-bar {
+	border-left: 1px solid rgb(92, 160, 223);
+	cursor: pointer;
+}
+
+.select-bar:hover {
+	border-left: 1px solid rgb(92, 160, 223);
+}
+
+.direct-user img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	float: left;
+	margin: 14px 15px;
+}
+
+.direct-user>div {
+	float: left;
+}
+
+.user-li {
+	width: 180px;
+	margin: 21px 0px;
+}
+
+.li-userId {
+	font-size: 15px;
+	font-weight: 400;
+	width:80%;
+	float:left;
+}
+
+.li-direct {
+	font-size: 16px;
+	font-weight: 300;
+	width:80%;
+	float:left;
+}
+.alarm{
+	    float: right;
+    background: red;
+    border-radius: 30px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin: 8px 0 0 141px;
+    padding: 0 auto;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+
+}
+
+.lContent ::-webkit-scrollbar {
+	width: 25px;
+}
+
+.lContent ::-webkit-scrollbar-thumb {
+	background-color: #a7a7a791;
+	border-radius: 50px;
+	background-clip: padding-box;
+	border: 9px solid transparent;
+}
+
+.lContent ::-webkit-scrollbar-track {
+	display: none;
+}
+
+/* 메세지 상대방 이름 */
+.message-user-div {
+	width: 899px;
+	float: left;
+	height: 10%;
+	border-bottom: 1px solid rgb(216, 213, 213);
+}
+
+.user-img {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	float: left;
+	margin: 12px 0px 12px 30px;
+	background: gray;
+}
+
+.user-img img {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+}
+
+.user-id {
+	font-size: 22px;
+	font-weight: 400;
+	margin: 18px;
+	float: left;
+}
+
+/* 메세지 내용 */
+.message {
+	width: 100%;
+	float: left;
+	height: 75%;
+	padding-top: 20px;
+	overflow-y: scroll;
+}
+
+.rContent ::-webkit-scrollbar {
+	width: 25px;
+}
+
+.rContent ::-webkit-scrollbar-thumb {
+	background-color: #a7a7a791;
+	border-radius: 50px;
+	background-clip: padding-box;
+	border: 9px solid transparent;
+}
+
+.rContent ::-webkit-scrollbar-track {
+	display: none;
+}
+
+.yourmessagediv {
+	float: left;
+	width: fit-content;
+	height: fit-content;
+	clear: both;
+	max-width: 80%;
+	margin: 20px 0px 0px 0px;
+}
+
+.yourmessageimg {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	 float: left;
+    margin-left: 46px;
+}
+
+.yourmessage {
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-break: break-all;
+	font-size: 20px;
+	font-weight: 300;
+	border-radius: 40px 40px;
+	border: 1px solid rgb(216, 213, 213);
+	padding: 10px 20px;
+	margin-left: 10px;
+	margin-bottom: 0px;
+}
+
+.mymessagediv {
+	max-width: 80%;
+	float: right;
+	width: fit-content;
+	height: fit-content;
+	clear: both;
+	margin: 20px 0px 0px 40px;
+}
+
+.mymessage {
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-break: break-all;
+	font-size: 20px;
+	font-weight: 300;
+	border-radius: 40px 40px;
+	padding: 10px 20px;
+	margin-right: 15px;
+	margin-bottom: -5px;
+	background: rgb(240, 240, 240);
+}
+
+/* 메세지 보내는 부분 */
+.send {
+	width: 100%;
+	float: left;
+	height: 15%;
+	border-radius: 15px;
+}
+
+.inputsend {
+	border: rgb(216, 213, 213) 1px solid;
+	width: 853px;
+	height: 50%;
+	float: left;
+	border-radius: 40px 40px;
+	margin: 27px 23px;
+	padding: 0px 30px;
+}
+
+input:focus {
+	outline: none;
+}

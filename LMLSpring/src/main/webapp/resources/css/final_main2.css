@@ -1,0 +1,419 @@
+* {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 본문 */
+.scContent {
+	background-color: rgb(248, 248, 248);
+}
+
+/* 위로가기 버튼 */
+.upBtn {
+	position: fixed;
+	margin: 690px 0px 0px 1612px;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background: rgba(201, 201, 201, 0.514);
+	cursor: pointer;
+}
+
+.upBtn img {
+	width: 25px;
+	height: 25px;
+	margin: 7px 8.5px;
+}
+
+/* 글쓰기 버튼 */
+.postBtn {
+	position: fixed;
+	margin: 750px 0px 0px 1600px;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background: white;
+	cursor: pointer;
+}
+
+.postBtn img {
+	width: 70px;
+	height: 70px;
+}
+
+.posticon {
+	width: 120px;
+	display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+	
+}
+
+.posticon:before {
+	pointer-events: none;
+	position: absolute;
+	z-index: -1;
+	content: '';
+	top: 100%;
+	left: 5%;
+	height: 10px;
+	width: 90%;
+	opacity: 0;
+	background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35)
+		0%, rgba(0, 0, 0, 0) 80%);
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%,
+		rgba(0, 0, 0, 0) 80%);
+	/* W3C */
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform, opacity;
+	transition-property: transform, opacity;
+}
+
+.posticon:hover, .posticon:focus, .posticon:active {
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+	/* move the element up by 5px */
+}
+
+.posticon:hover:before, .posticon:focus:before, .posticon:active:before
+	{
+	opacity: 1;
+	-webkit-transform: translateY(5px);
+	transform: translateY(5px);
+	/* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+/* 글쓰기 선택 모달 부분 */
+.modal2 {
+	position: fixed;
+	z-index: 15;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.781);
+}
+
+.md_content {
+	position: fixed;
+	width: 383px;
+	height: 237px;
+	top: 42%;
+	left: 40%;
+	background-color: white;
+	position: absolute;
+	border-radius: 10px;
+	z-index: 16;
+}
+
+.md_content #text {
+	position: relative;
+	margin-left: 17px;
+	top: 7px;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.xbutton {
+	position: absolute;
+	top: 3%;
+	left: 91%;
+	border: none;
+}
+
+.post-style-div {
+	float: left;
+	width: 165px;
+	height: 68%;
+	margin-left: 26px;
+}
+
+.post-style-btn {
+	width: 120px;
+	height: 120px;
+	margin: 4px 22px 0px;
+	border-radius: 22px;
+	background-color: rgb(238, 238, 238);
+	cursor: pointer;
+}
+
+.post-style-p {
+	margin: 10px 57px 0px;
+	font-weight: 400;
+}
+
+.post-qna-div {
+	float: left;
+	width: 165px;
+	height: 68%;
+}
+
+.post-qna-btn {
+	width: 120px;
+	height: 120px;
+	margin: 4px 22px 0px;
+	border-radius: 22px;
+	background-color: rgb(238, 238, 238);
+	cursor: pointer;
+}
+
+.post-qna-p {
+	margin: 10px 68px 0px;
+	font-weight: 400;
+}
+
+/* 체형별 선택 */
+.choice {
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	margin: 109px 396px 0px;
+	border-radius: 8px 8px;
+	border: 1px solid rgb(216, 213, 213);
+	background-color: white;
+	float: right;
+	cursor: pointer;
+}
+
+.pchoice {
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+}
+
+.cSelect {
+	width: 500px;
+}
+
+.choice1 {
+	position: absolute;
+	margin: 10px 300px;
+}
+
+.choiceBtn {
+	font-size: 13px;
+	position: relative;
+	width: 83px;
+	height: 25px;
+	text-align: center;
+	border-radius: 5px 5px;
+	cursor: pointer;
+	color: #000000;
+	background-color: #f5f5f5da;
+	border: #acacac solid 1px;
+	padding: 2px;
+	transition: all 0.1s ease;
+}
+
+.choiceBtn:hover {
+	color: #ffffff;
+	background-color: #a3a3a3c9;
+	border: #a3a3a3c9 solid 1px;
+	animation: 0.1s step-end 0 2;
+	transition: all 0.2s ease 0.2s;
+	cursor: pointer;
+}
+
+.close {
+	position: absolute;
+	float: right;
+	width: 15px;
+	height: 15px;
+	margin: 6px 760px;
+	border-radius: 50%;
+}
+
+.close img {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	margin: -21px 0px 0px 19px;
+}
+
+/* 게시물 테이블 */
+.ctable {
+	width: 1920px;
+	min-width: 1400px;
+	height: 100%;
+	padding: 170px 386px;
+}
+
+.content {
+	position: relative;
+	width: 350px;
+	height: 350px;
+	background-color: rgb(160, 160, 160);
+	margin: 12px;
+}
+
+.cImg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* =========== 컨텐츠 마우스오버 했을 때 =========== */
+.chover {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+}
+
+.chContnet {
+	position: static;
+	background: rgba(0, 0, 0, 0.404);
+	width: 350px;
+	height: 150px;
+	margin-top: 0px;
+}
+
+.hover-detail-content {
+	width: 350px;
+	height: 200px;
+	cursor: pointer;
+}
+
+/* 유저정보 */
+.user {
+	width: 100%;
+	height: 50px;
+}
+
+.userImg {
+	width: 50px;
+	height: 50px;
+	float: left;
+	border: 1px solid rgb(190, 190, 190);
+	border-radius: 50%;
+	background: gray;
+	margin: 10px;
+	overflow: hidden;
+}
+
+.userImg img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: -1px;
+	cursor: pointer;
+}
+
+.userId {
+	float: left;
+	color: white;
+	margin: 19px 2px;
+	font-weight: 400;
+	font-size: 19px;
+	cursor: pointer;
+}
+
+/* 게시물 내용 */
+.con {
+	width: 100%;
+	height: 50px;
+	cursor: pointer;
+}
+
+.userCon {
+	height: 50px;
+	font-weight: 300;
+	margin: 0px 10px;
+}
+
+.userCon p {
+	width: 320px;
+	height: 50px;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	color: white;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* 게시물 버튼 */
+.cBtn {
+	width: 100%;
+	height: 50px;
+}
+
+.cHeart {
+	width: 173px;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+}
+
+.cHeart img {
+	width: 24px;
+	height: 24px;
+	margin: 13px 77px;
+}
+
+.cComment {
+	width: 175px;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+}
+
+.cbox {
+	position: absolute;
+	width: 175px;
+	height: 30px;
+	margin: 10px 0px;
+	float: left;
+	border-left: 1px solid white;
+}
+
+.cComment img {
+	width: 29px;
+	height: 27px;
+	margin: 12px 75px;
+}
+
+
+.hoverSub{
+    position: absolute;
+    right: 20px;
+    top: 469px;
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+    border-radius: 4px;
+    box-shadow: 0px 0px 11px rgb(220,220,220);
+}
+
+.hoverSub li{
+    list-style-type:none;
+    height: 30px;
+    font-size: 15px;
+    cursor:pointer; 
+    text-align: center;
+}
+
+.hoverSub1{
+    margin: 3px 5px 3px 5px;
+    color: rgb(94, 94, 94);
+}
+
+.hoverSub li:hover{
+    background-color: rgba(238, 238, 238, 0.699);
+}
+
+.hoverSub a{
+    text-decoration: none;
+}
+
+

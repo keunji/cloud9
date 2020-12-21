@@ -1,0 +1,225 @@
+
+/*---------------------------------전체 하단 div---------------------------------*/
+.Abox{
+    width: 1200px;
+    height: 700px;
+    border:1px solid rgb(216, 213, 213);
+    margin-right: 100px;
+    border-radius: 0.4em;
+    background-color: white;
+}
+
+.AContent {
+    height: 900px;
+    background-color: rgb(248, 248, 248);
+}
+
+.Atable{
+    width: 100%;
+    min-width: 1400px;
+    height: 100%;
+    padding: 100px 0 0 400px;
+   
+}
+
+.Abox div{
+    float: left;
+}
+
+/*---------------------------------왼쪽 오른쪽 div크기 설정---------------------------------*/
+.lContent{
+    height: 100%;
+    width: 300px;
+    border-right: 1px solid rgb(216, 213, 213);
+}
+
+.rContent{
+    height: 100%;
+    width: 890px;
+}
+
+/*---------------------------------lContent설정--------------------------------- */
+li{
+    list-style: none;
+    height: 80px;
+}
+
+li.put{
+    background-color: rgba(27, 21, 21, 0.034);
+    border-left: 2px solid rgb(92, 160, 223);
+}
+
+li:hover{
+    background-color: rgba(27, 21, 21, 0.034);
+}
+
+.Ma{
+    text-decoration: none !important;
+    color: rgb(124, 123, 123);
+    margin-left: 40px;
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 350;
+}
+
+.Ma:hover{
+    text-decoration: none !important;
+    color: black;
+}
+
+
+.mainbtn{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.lmenu{
+    height: 500px;
+    width: 300px;
+}
+
+/*---------------------------------rContent 설정---------------------------------*/
+
+.MyInfo>div{
+    float: left;
+}
+
+/*프로필 사진 수정*/
+.profile{
+    margin-top: 60px;
+    margin-left: 60px;
+    zheight:300px;
+    width: 300px;
+}
+
+.photo{
+    min-width: 230px;
+    min-height: 200px;
+    border: 2px solid rgb(190, 190, 190);
+    margin: 20px 0 20px 30px ;
+    border-radius: 50%;
+    /* background-color: rgb(238, 238, 238); */
+}
+
+#btn-upload{
+   margin-left: 67px;
+   color: rgb(107, 105, 105); 
+   background-color: rgb(255, 255, 255);
+   border: 1.8px solid rgb(197, 197, 197);
+   border-radius: 0.5em;
+   height:38px;
+   cursor: pointer;
+   outline: none;
+   transition: 0.4s;
+}
+
+#btn-upload:hover{
+    background-color: rgba(233, 231, 231, 0.568);
+}
+
+#file { display:none; }
+
+#Myimg{
+    width: 230px;
+    height: 200PX;
+    border-radius: 50%;
+
+}
+/*------------------정보 수정------------------*/
+.ModifyInfo{
+    margin-top: 50px;
+    height: 75%;
+    width: 450px;
+}
+
+.Info{
+    margin: 30px 40px 0 30px; 
+    font-size: 19px;
+    color: rgb(107, 105, 105); 
+    font-weight: 400;
+    width: 450px;
+}
+
+.infoinput{
+    width: 300px;
+    height: 36px;
+    margin-left: 20px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 0.15em;
+}
+
+input, textarea:focus {outline:none;}
+
+.gender{
+    margin-left: 20px;
+    margin-right: 10px;
+    width:20px;height:20px;
+}
+
+/*------------------자기소개 설정------------------*/
+#inrtoduce{
+    width: 300px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 0.15em;
+    height: 100px;
+    resize: none;
+    margin-top: 30px;
+    position: absolute ;
+}
+
+.Info2{
+    margin: 30px 20px 0 30px; 
+    font-size: 19px;
+    font-weight: 500%;
+    position: relative;
+    width: fit-content;
+    height: 100px;
+    color: rgb(107, 105, 105); 
+    font-weight: 400;
+}
+
+/*------------------제출/탈퇴버튼------------------*/
+.Fbtn{
+    margin-top: 30px;
+    height: 70px;
+    width: 88%;
+    text-align: right;
+
+}
+
+.btns2{
+    height: 40px;
+    width: 100px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+
+#Sbtn{
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  background-color: rgb(50, 158, 230);
+  outline: none;
+  transition: 0.3s;
+}
+
+#Sbtn:hover{
+    background-color: rgb(92, 190, 255);
+    color: rgb(255, 255, 255);
+}
+
+#Delbtn{
+    color: rgb(50, 158, 230);
+    font-weight: 700;
+    margin-right: 500px;
+    background:none;
+    outline: none;
+    transition: 0.5s;
+}
+
+#Delbtn:hover{
+    background-color: rgb(231, 227, 227);
+}

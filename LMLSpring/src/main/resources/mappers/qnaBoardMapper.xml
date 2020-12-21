@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qnaMapper">
+	<resultMap type="qnaBoard" id="qnaboardResultSet">
+		<id property="q_num" column="Q_NUM"/>
+		<result property="q_user_num" column="Q_USER_NUM"/>
+		<result property="q_content" column="Q_CONTENT"/>
+		<result property="q_status" column="Q_STATUS"/>
+		<result property="q_date" column="Q_DATE"/>
+		<result property="image1" column="IMAGE1"/>
+		<result property="image2" column="IMAGE2"/>
+		<result property="image3" column="IMAGE3"/>
+		<result property="image4" column="IMAGE4"/>
+		<result property="image5" column="IMAGE5"/>
+		<result property="q_user_height" column="HEIGHT"/>
+		<result property="q_user_weight" column="WEIGHT"/>
+		<result property="q_profile_img" column="RENAME_PROFILE_IMG"/>
+		<result property="q_user_id" column="ID"/>
+		<result property="q_name" column="UNAME"/>
+		<result property="q_hash" column="HASHTAG"/>
+		<result property="h_bnum" column="H_BNUM"/>
+		<result property="h_unum" column="H_UNUM"/>
+	</resultMap>
+	
+	<resultMap type="qnaComment" id="CommentResultSet">
+		<id property="cq_no" column="C_NO"/>
+		<result property="cq_bno" column="C_BNO"/>
+		<result property="cq_content" column="C_CONTENT"/>
+		<result property="cq_unum" column="C_UNUM"/>
+		<result property="cq_recno" column="C_RECNO"/>
+		<result property="cq_level" column="C_LEVEL"/>
+		<result property="cq_utag" column="C_UTAG"/>
+		<result property="cq_date" column="C_DATE"/>
+		<result property="uname" column="UNAME"/>
+		<result property="profile" column="RENAME_PROFILE_IMG"/>
+	</resultMap>
+	
+	<insert id="insertQnaPost" parameterType="qnaBoard">
+		INSERT
+		INTO LML_QNABOARD
+		VALUES(QNABOARD_SEQ.NEXTVAL, #{q_user_num}, #{q_content}, DEFAULT, SYSDATE, #{image1}, #{image2}, #{image3}, #{image4}, #{image5})
+	</insert>
+	<select id="getqnum" resultType="_int">
+		SELECT QNABOARD_SEQ.CURRVAL AS Q_NUM FROM DUAL
+	</select>
+	<insert id="insertStyleHash" parameterType="qnaBoard">
+		INSERT INTO LML_QNAHASH
+		VALUES (#{q_hash}, #{q_num})
+	</insert>
+	<select id="selectList" resultMap="qnaboardResultSet">
+		SELECT *
+		FROM LML_QNABOARD
+		JOIN LML_MEM ON (Q_USER_NUM = USER_NUM)
+		ORDER BY Q_NUM DESC
+	</select>
+	<select id="selectOne" resultMap="qnaboardResultSet">
+		SELECT *
+		FROM LML_QNABOARD
+		JOIN LML_MEM ON (Q_USER_NUM = USER_NUM)
+		WHERE Q_NUM = #{qnum}
+	</select>
+	<select id="qnaHeartList" resultType="_int">
+		SELECT * 
+		FROM LML_QNAHEART 
+		WHERE H_UNUM = #{unum}
+	</select>
+	<insert id="addHeart" parameterType="qnaBoard">
+		INSERT INTO LML_QNAHEART 
+		VALUES (#{h_bnum}, #{h_unum})
+	</insert>
+	<insert id="deleteHeart" parameterType="qnaBoard">
+		DELETE FROM LML_QNAHEART
+		WHERE H_BNUM = #{h_bnum}
+		AND H_UNUM = #{h_unum}
+	</insert>
+	<select id="selectHash" resultType="string">
+		SELECT HASHTAG 
+		FROM LML_QNAHASH 
+		WHERE H_BNUM = #{qnum}
+		ORDER BY HASHTAG DESC
+	</select>
+	<select id="getDetailHeart" resultMap="qnaboardResultSet">
+		SELECT H_BNUM, H_UNUM, UNAME, RENAME_PROFILE_IMG
+		FROM LML_QNAHEART
+		JOIN LML_MEM ON(H_UNUM = USER_NUM)
+		WHERE H_BNUM = #{qnum}
+	</select>
+	<select id="selectComment" resultMap="CommentResultSet">
+		SELECT C_NO, C_BNO, C_CONTENT, C_UNUM, C_RECNO, C_LEVEL, C_DATE, UNAME, RENAME_PROFILE_IMG
+		FROM LML_QNACOMMENT
+		JOIN LML_MEM ON (C_UNUM = USER_NUM)
+		WHERE C_BNO = #{qnum}
+		ORDER BY C_NO
+	</select>
+	<insert id="addComment" parameterType="qnaComment">
+		INSERT INTO LML_QNACOMMENT 
+		VALUES (LML_QNACOMM_SEQ.NEXTVAL, #{cq_bno}, #{cq_content}, #{cq_unum}, NULL, DEFAULT, NULL, SYSDATE)
+	</insert>
+	<update id="deleteComment" parameterType="_int"> 
+		DELETE FROM LML_QNACOMMENT
+		WHERE C_NO = #{cno}
+	</update>
+</mapper>

@@ -1,0 +1,466 @@
+.taga {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.taga:link {
+	color: black;
+	text-decoration: none;
+}
+
+.taga:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.taga:hover {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.myPage {
+	width: 1920px;
+	height: 100%;
+}
+
+.my_top {
+	width: 100%;
+	height: 40%;
+	/* background: red; */
+	text-align: center;
+	position: relative;
+	min-width: 1120px;
+}
+.myModal2 {
+    /* display: none; Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 15; /*Sit on top*/
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.781); /* Fallback color */
+}
+.board-detail2{
+    width: 955px;
+    height: 850px;
+    background-color: white;
+    position: absolute;
+    left: 450px;
+    top: 25px;
+}
+
+
+.my_photo {
+	position: relative;
+	padding: 50px 20px;
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin-top: 46px;
+	text-align: center;
+	float: left;
+}
+
+.my_info {
+	margin-top: 111px;
+	position: relative;
+	float: left;
+	margin-left: 50px;
+}
+
+.info {
+	width: 600px;
+	height: 80px;
+	text-align: left;
+	padding-left: 15px;
+}
+
+.top {
+	position: relative;
+	display: inline-block;
+	min-width: 1200px;
+	height: 377px;
+	border-bottom: 1px solid #b3b3b3;
+}
+
+.info_btn {
+	margin-left: 60px;
+	width: 64px;
+	height: 43px;
+	border: 0;
+	background-color: transparent !important;
+	outline: none;
+}
+
+.info_btn:focus {
+	outline: none;
+}
+
+.btn_img {
+	width: 43px;
+	height: 43px;
+	border: 0;
+	outline: 0;
+}
+
+.iftext_1 {
+	float: left;
+	font-size: 25px;
+	width: 150px;
+}
+
+.iftext {
+	float: left;
+	font-size: 25px;
+	width: 150px;
+}
+
+.name {
+	font-size: 25px;
+	font-weight: bold;
+	float: left;
+	position: relative;
+}
+
+.iftext_2 {
+	position: absolute;
+	margin: 42px 0 0 0;
+	font-size: 21px;
+}
+
+.mytable {
+	width: 1920px;
+	min-width: 1400px;
+	height: 100%;
+	padding: 32px 392px;
+}
+
+.content {
+	width: 350px;
+	height: 350px;
+	background-color: rgb(160, 160, 160);
+	margin: 12px;
+}
+
+.content:hover {
+	opacity: 0.5;
+}
+
+.img {
+	display: block;
+}
+
+.tagmenu {
+	text-align: end;
+	width: 80%;
+	height: 5px;
+	padding-top: 5px;
+}
+
+.tagbtn {
+	border: 0;
+	outline: 0;
+	background-color: white;
+	font-weight: bold;
+}
+
+.tagbtn:focus {
+	outline: none;
+}
+
+.tagtable {
+	width: 1920px;
+	min-width: 1400px;
+	height: 100%;
+	padding: 32px 392px;
+}
+
+table {
+	word-break: break-all;
+	width: 70%;
+	border-spacing: 0px;
+}
+
+.myModal10 {
+	/* display: none; Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 15; /*Sit on top*/
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	/*  background-color: rgba(0, 0, 0, 0.781); Fallback color */
+}
+.myModal1 {
+	/* display: none; Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 15; /*Sit on top*/
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	/*  background-color: rgba(0, 0, 0, 0.781); Fallback color */
+}
+.board-detail10 {
+	width: 500px;
+	height: 609px;
+	/* margin: 0 auto; */
+	background-color: white;
+	position: RELATIVE;
+	left: 704px;
+	overflow: hidden;
+	top: 70px;
+	border-radius: 26px;
+	border: solid 1px #7e7e7e;
+}
+
+#myfalwer {
+	clolr: black;
+	cursor: pointer;
+}
+
+#myfalowoo {
+	clolr: black;
+	cursor: pointer;
+}
+
+.mo_fallower {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	margin: 24px auto;
+	border: solid 1px #7e7e7e;
+	overflow: auto;
+	border-right: none;
+	border-left: none;
+	position: relative;
+}
+
+
+
+.board-detail1 {
+	width: 500px;
+	height: 609px;
+	/* margin: 0 auto; */
+	background-color: white;
+	position: RELATIVE;
+	left: 704px;
+	overflow: hidden;
+	top: 70px;
+	border-radius: 26px;
+	border: solid 1px #7e7e7e;
+}
+
+.mo_fallowoo {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	margin: 24px auto;
+	border: solid 1px #7e7e7e;
+	overflow: auto;
+	border-right: none;
+	border-left: none;
+	position: relative;
+}
+
+/*팔로워 테이블 */
+.add_table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+.userimg {
+	border-radius: 70%;
+}
+
+.imgtd {
+	padding: 6px 1px 7px 17px;
+	height: 72px;
+}
+
+.btntd {
+	padding-left: 78px;
+	margin: 0;
+}
+
+.button2{
+    border: 1px solid rgb(50, 158, 230);
+    border-radius: 0.4em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 18px;
+    background-color: rgb(50, 158, 230);
+    outline: none;
+    transition: 0.3s;
+    width: 75px;
+    height: 35px;
+}
+
+.button1{
+    border: 1px solid lightgray;
+    border-radius: 0.4em;
+    cursor: pointer;
+    color: gray;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #f5f5f5;
+    outline: none;
+    transition: 0.3s;
+    width: 75px;
+    height: 35px;
+}
+
+
+
+
+
+
+.idtd {
+	font-weight: bold;
+}
+
+.nametd {
+	font-weight: bolder;
+}
+
+.frofile {
+	width: 256px;
+	height: 256px;
+}
+
+.blockbtn {
+	margin-left: 2px;
+	border-radius: 25px;
+	border: 0.8ps;
+	background-color: #ffffff !important;
+	outline: none;
+	/* border: solid 1px gray; */
+	font-size: 19px;
+	border: solid 1px #e3e3e3;
+	color: black;
+	width: 85px;
+	height: 33px;
+	font-weight: bolder;
+	cursor:pointer;
+}
+
+.blockbtn:focus {
+	outline: 0;
+	border: solid 1px;
+}
+
+.blockbtn:hover {
+	color: #f90303;
+	border: solid 1px #f10101;
+}
+
+.messegebtn {
+	border-radius: 25px;
+	border: 0.8ps;
+	background-color: #ffffff !important;
+	outline: none;
+	border: solid 1px #e3e3e3;
+	font-size: 20px;
+	font-weight: bolder;
+	width: 91px;
+	height: 37px;
+	margin: 0 -24px 0 27px;
+}
+
+.messegebtn:focus {
+	outline: 0;
+	border: solid 1px;
+}
+
+.followbtn {
+	margin-left: 27px;
+    border-radius: 25px;
+    border: 0.8ps;
+    background-color: #ffffff !important;
+    outline: none;
+    font-size: 19px;
+    border: solid 1px rgb(50, 158, 230);
+    color: rgb(50, 158, 230);
+    width: 85px;
+    height: 33px;
+    font-weight: bolder;
+    cursor:pointer;
+}
+
+.followbtn:focus {
+	outline: 0;
+	border: solid 1px;
+}
+
+.followbtn:hover {
+	color: white;
+	background-color: rgb(50, 158, 230) !important;
+	border: solid 1px rgb(50, 158, 230);
+}
+
+
+.unfollowbtn {
+	margin-left: 27px;
+    border-radius: 25px;
+    background-color: #ffffff !important;
+    outline: none;
+    font-size: 19px;
+    border: solid 1px #e3e3e3;
+    color: black;
+    width: 85px;
+    height: 33px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.unfollowbtn:focus {
+	outline: 0;
+	border: solid 1px;
+}
+
+.unfollowbtn:hover {
+	color: gray;
+	background-color: white !important;
+	border: solid 1px gray;
+}
+
+
+
+.unblockbtn {
+	margin-left: 27px;
+	border-radius: 25px;
+	border: 0.8ps;
+	background-color: #f10101 !important;
+	outline: none;
+	/* border: solid 1px gray; */
+	font-size: 19px;
+	border: solid 0px #e3e3e3;
+	color: white;
+	width: 85px;
+	height: 33px;
+	font-weight: bolder;
+	cursor:pointer;
+}
+
+.unblockbtn:focus {
+	outline: 0;
+	border: solid 1px;
+}
+
+.unblockbtn:hover {
+	color: #f90303;
+	background-color: white !important;
+	border: solid 1px #f90303;
+}
+
+

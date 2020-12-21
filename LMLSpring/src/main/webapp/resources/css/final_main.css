@@ -1,0 +1,246 @@
+* {
+	margin: 0px;
+	padding-top: 0px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 100;
+}
+a{
+	color : black;
+}
+a:hover{
+/* 	font-weight:bolder;
+	color:linear-gradient(  to right, red ,orange,yellow,green,blue,purple );
+	
+ 	 background: linear-gradient(  to right, red ,orange,yellow,green,blue,purple );
+	 */
+	   background: -webkit-linear-gradient(30deg, red,orange,green,blue,purple);
+    color: transparent;
+    -webkit-background-clip: text;
+
+}
+body {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+/* 상단 타이틀 */
+.hTitle {
+	width: 1920px;
+	height: 60px;
+	background-color: white;
+	border-bottom: 1px solid rgb(230, 230, 230);
+	top: 0px;
+	position: fixed;
+	z-index: 10;
+}
+
+.hTitle1 {
+	float: left;
+	width: 466px;
+}
+
+.nav1 {
+	width: 1400px;
+	height: 50px;
+	margin-left: 260px;
+}
+
+.titleImg {
+	width: 75px;
+	height: 40px;
+	margin-top: 9px;
+}
+
+/* 검색창 */
+.sUrl {
+	margin: 13px 50px;
+	padding-left: 50px;
+	-webkit-box-flex: 5;
+	-ms-flex-positive: 5;
+	flex-grow: 5;
+}
+
+.searchInput {
+	font-family: system-ui, Helvetica, Arial, sans-serif;
+	font-size: 14px !important;
+	width: 200px;
+	border: none;
+	margin-top: 7px;
+	background-color: transparent;
+}
+
+.searchInput:focus {
+	outline: none;
+}
+
+.sAfter {
+	width: 200px;
+	height: 1.1px;
+	background: linear-gradient(to right, rgb(90, 90, 90) 50%, transparent
+		50%);
+	background-color: rgb(201, 201, 201);
+	background-size: 200% 100%;
+	background-position: 100% 0;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.searchInput:focus ~ .sAfter {
+	background-position: 0 0;
+}
+
+.searchInput::placeholder {
+	color: rgb(156, 156, 156);
+	font-size: 15px;
+}
+
+/* 검색창 */
+
+/* 로그인 버튼 */
+.loginBtn {
+	width: 120px;
+	height: 36px;
+	margin: 12px 0px;
+	padding-top: 4px;
+	border-radius: 25px 25px;
+	text-align: center;
+	color: rgba(94, 94, 94, 0.74);
+	font-weight: 400;
+}
+
+.loginBtn:hover {
+	color: rgba(94, 94, 94, 0.842);
+	font-weight: 500;
+}
+
+/* 알림 채팅 마이페이지 */
+.htMenu div {
+	float: right;
+}
+
+.htMenu img {
+	width: 22px;
+	height: 22px;
+	margin-top: 18px;
+	margin-left: 13px;
+	cursor: pointer;
+}
+/* 알림 채팅 마이페이지 */
+
+/* 마이페이지 메뉴 */
+.mySub {
+	position: absolute;
+	right: 258px;
+	top: 41px;
+	background-color: rgb(255, 255, 255);
+	padding: 0;
+	margin: 0;
+	border-radius: 4px;
+	box-shadow: 0px 0px 11px rgb(220, 220, 220);
+}
+
+.mySub li {
+	list-style-type: none;
+	height: 30px;
+	font-size: 15px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.mySub1 {
+	margin: 3px 5px 3px 5px;
+	color: rgb(94, 94, 94);
+}
+
+.mySub li:hover {
+	background-color: rgba(238, 238, 238, 0.699);
+}
+
+.mySub a {
+	text-decoration: none;
+}
+
+/* 마이페이지 메뉴 */
+
+/* 상단 메뉴 */
+.hMenu {
+	width: 1920px;
+	height: 30px;
+	z-index: 9;
+	position: fixed;
+	background-color: rgb(245, 245, 245);
+	border-bottom: 1px solid rgb(230, 230, 230);
+	box-sizing: border-box;
+	transition: All 0.2s ease;
+	-webkit-transition: All 0.2s ease;
+	-moz-transition: All 0.2s ease;
+	-o-transition: All 0.2s ease;
+}
+
+.hMenu1 {
+	margin-left: 264px;
+	width: 200px;
+	position: relative;
+}
+
+.hMenu2 {
+	margin: 4px 13px 0px 0px;
+	font-size: 13px;
+	color: rgb(150, 150, 150);
+	float: left;
+	cursor: pointer;
+}
+
+.hMenu2 span {
+	font-weight: 500;
+}
+
+.hMenu2.on {
+	color: rgb(77, 77, 77);
+}
+
+.hMenu1>span {
+	position: absolute;
+	left: -7px;
+	top: 29px;
+	bottom: 0;
+	width: 45px;
+	height: 1px;
+	background: rgb(77, 77, 77);
+	opacity: 0;
+	transition: all .2s;
+}
+
+.hMenu2:nth-child(1).on ~ span {
+	left: -4px;
+	opacity: 1;
+}
+
+.hMenu2:nth-child(2).on ~ span {
+	left: 43px;
+	opacity: 1;
+}
+
+.hMenu2:nth-child(3).on ~ span {
+	left: 92px;
+	opacity: 1;
+}
+
+.hMenu2:nth-child(4).on ~ span {
+	left: 138px;
+	opacity: 1;
+}
+
+.messageAlarm {
+	background: red;
+    color: #ffffff;
+    width: 22px;
+    height: 22px;
+    float: right;
+    font-weight: bold;
+    margin: -12px 0 0 25px;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+}

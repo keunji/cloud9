@@ -1,0 +1,322 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	color: #000000;
+	font-weight: bold;
+}
+/* Change the color to your own background color */
+ input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+	 transition: background-color 5000s ease-in-out 0s;
+	 -webkit-transition: background-color 9999s ease-out;
+     -webkit-box-shadow: 0 0 0px 1000px #eeeee inset !important;
+
+   }
+.wrap {
+	height: 100%;
+	width: 100%;
+	background-image: url('../../images/jmImg/back4.jpg');
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+
+.checkbox {
+	align-content: center;
+}
+
+.Register {
+	margin: -10px 0 0 0;
+}
+
+.radio {
+	margin: 13px 8px 14px 9px;
+}
+
+.radio_gender {
+	width: fit-content;
+	/* margin-top: 10px; */
+}
+
+.form-wrap {
+	width: 380px;
+	height: 600px;
+	position: relative;
+	margin: 6% auto;
+	margin-left: 50%;
+	background: #ffffffbe;
+	padding: 5px;
+	overflow: hidden;
+	opacity: 0.9;
+	color: #000000;
+}
+
+.button-wrap {
+	width: 230px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 600px 9px #fcae8f;
+	border-radius: 30px;
+}
+
+.togglebtn {
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+
+#btn {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, rgb(143, 143, 143),
+		rgb(143, 143, 143));
+	border-radius: 30px;
+	transition: .5s;
+}
+
+.social-icons {
+	margin: 13px auto;
+	/*  margin: 30px auto; */
+	text-align: center;
+}
+
+.social-icons img {
+    cursor: pointer;
+    left: 20px;
+    position: absolute;
+    height: 47px;
+    width: 133px;
+    margin: 36px 0 2px 126px;
+}
+
+.input-group {
+	top: 163px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+	color: #000000;
+}
+
+input::placeholder {
+	color: #000000;
+} 
+
+
+.input-field {
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border: none;
+	border-bottom: 1px solid #070707;
+	outline: none;
+	background: transparent;
+	color: #000000;
+}
+
+.submit {
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, rgb(143, 143, 143),
+		rgb(143, 143, 143));
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+	color: #000000;
+}
+
+.modalbtn {
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+.checkbox {
+	margin: 30px 10px 30px 0;
+}
+
+span {
+   color: #000000;
+    font-size: 14px;
+}
+
+#login {
+	left: 50px;
+}
+
+#register {
+	 left: 450px; 
+	top: 110px;
+}
+
+span.guide {
+	display: none;
+	font-size: 12px;
+	top: 12px;
+	right: 10px;
+	position: absolute;
+}
+
+span.ok {
+	color: green;
+}
+
+span.error {
+	color: red;
+}
+
+span.guides {
+	display: none;
+	font-size: 12px;
+	top: 61px;
+	right: 10px;
+	position: absolute;
+}
+
+span.oks {
+	color: green;
+}
+
+span.errors {
+	color: red;
+}
+
+.myModal {
+	/* display: none; Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 15; /*Sit on top*/
+	left: 0;
+	top: 0;
+	color: white;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	/*  background-color: rgba(0, 0, 0, 0.781); Fallback color */
+}
+.board-detail {
+  width: 460px;
+    /* margin: 0 auto; */
+    height: 667px;
+    background-color: white;
+    position: RELATIVE;
+    left: 413px;
+    overflow: auto;
+    top: 70px;
+}
+	
+
+
+ul>li {
+	list-style: none
+}
+
+a {
+	text-decoration: none;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* #joinForm {
+	width: 460px;
+	margin: 0 auto;
+	top: 123px;
+	position: relative;
+	background: white;
+} */
+
+}
+ul.join_box {
+	border: 1px solid #ddd;
+	background-color: #fff;
+}
+
+.checkBox, .checkBox>ul {
+	position: relative;
+}
+
+.checkBox>ul>li {
+	float: left;
+}
+
+.checkBox>ul>li:first-child {
+	width: 85%;
+	padding: 15px;
+	font-weight: 600;
+	color: #000000;
+}
+
+.checkBox>ul>li:nth-child(2) {
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	margin-top: -12px;
+}
+
+.checkBox textarea {
+	width: 96%;
+	height: 90px;
+	margin: 0 2%;
+	background-color: #f7f7f7;
+	color: #888;
+	border: none;
+}
+
+.footBtwrap {
+	margin-top: 15px;
+}
+
+.footBtwrap>li {
+	float: left;
+	width: 50%;
+	height: 60px;
+}
+
+.footBtwrap>li>button {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	text-align: center;
+	line-height: 60px;
+}
+
+.fpmgBt1 {
+	background-color: #fff;
+	color: #888;
+}
+
+.fpmgBt2 {
+	background-color: lightsalmon;
+	color: #fff;
+}
+#agree{
+	font-size:medium; 
+	cursor: pointer;
+}
+#agree:hover{
+	color: #8080ff;
+	font-size:large; 
+}
+#searchinfo{
+	cursor:pointer;
+	
+}
+#searchinfo:hover{
+	color:blue;
+}
+

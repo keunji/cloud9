@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="memberMapper">
+	<resultMap type="Member" id="memberResultSet">
+		<id property="id" column="ID" />
+		<result property="mail" column="MAIL" />
+		<result property="upwd" column="UPWD" />
+		<result property="m_phone" column="M_PHONE" />
+		<result property="gender" column="GENDER" />
+		<result property="height" column="HEIGHT" />
+		<result property="weight" column="WEIGHT" />
+		<result property="uname" column="UNAME" />
+		<result property="intro" column="INTRO" />
+		<result property="profile_img" column="PROFILE_IMG" />
+		<result property="user_num" column="USER_NUM" />
+		<result property="from_follow" column="FROM_FOLLOW" />
+		<result property="to_follow" column="TO_FOLLOW" />
+		<result property="to_follower" column="TO_FOLLOWER" />
+		<result property="from_follower" column="FROM_FOLLOWER" />
+		<result property="f_block" column="F_BLOCK" />
+		<result property="del_flag" column="DEL_FLAG" />
+		<result property="rename_profile_img"
+			column="RENAME_PROFILE_IMG" />
+	</resultMap>
+
+	<resultMap type="ChatRoom" id="chatRoomResultSet">
+		<result property="chatroomid" column="CHATROOMID" />
+		<result property="fromuser" column="FROMUSER" />
+		<result property="touser" column="TOUSER" />
+		<result property="rename_profile_img"
+			column="RENAME_PROFILE_IMG" />
+		<result property="count" column="COUNT"/>
+		
+	</resultMap>
+
+	<resultMap type="ChatLog" id="chatLogResultSet">
+		<result property="chatroomid" column="CHATROOMID" />
+		<result property="chatlog" column="CHATLOG" />
+		<result property="chatdate" column="CHATDATE" />
+		<result property="user_name" column="USER_NAME" />
+	</resultMap>
+
+
+	<select id="loginMember" parameterType="Member"
+		resultMap="memberResultSet">
+
+		SELECT *
+		FROM LML_MEM
+		WHERE ID=#{id}
+		AND UPWD=#{upwd}
+		AND
+		DEL_FLAG='N'
+
+	</select>
+
+	<select id="nloginMember" parameterType="String"
+		resultMap="memberResultSet">
+		SELECT *
+		FROM LML_MEM
+		WHERE ID=#{id}
+	</select>
+
+	<insert id="insertMember" parameterType="Member">
+		INSERT INTO LML_MEM
+		VALUES(#{id},#{mail},#{upwd},#{m_phone},#{height},#{weight},#{gender},#{uname},#{intro},DEFAULT,LML_MEM_SEQ.NEXTVAL,DEFAULT,DEFAULT)
+
+	</insert>
+	<select id="idCheck" parameterType="string" resultType="_int">
+		SELECT
+		COUNT(*)
+		FROM LML_MEM
+		WHERE ID=#{id}
+		AND DEL_FLAG='N'
+	</select>
+
+	<select id="nameCheck" parameterType="string" resultType="_int">
+		SELECT
+		COUNT(*)
+		FROM LML_MEM
+		WHERE UNAME=#{uname}
+		AND DEL_FLAG='N'
+	</select>
+
+	<update id="memberUpdate" parameterType="Member">
+		UPDATE LML_MEM
+		SET
+		MAIL=#{mail}
+		,UNAME=#{uname},M_PHONE=#{m_phone},HEIGHT=#{height},WEIGHT=#{weight},GENDER=#{gender},INTRO=#{intro},
+		PROFILE_IMG=#{profile_img}, RENAME_PROFILE_IMG=#{rename_profile_img}
+		WHERE ID=#{id}
+
+	</update>
+	<select id="pwdCheck" parameterType="Member" resultType="_int">
+		SELECT
+		COUNT(*)
+		FROM LML_MEM
+		WHERE UPWD=#{upwd} AND ID=#{id}
+		AND DEL_FLAG='N'
+	</select>
+
+	<update id="pwdChange" parameterType="Member">
+		UPDATE LML_MEM SET
+		UPWD=#{upwd} WHERE ID=#{id}
+	</update>
+
+	<select id="selectFollowList" resultMap="memberResultSet">
+		SELECT FROM_FOLLOW,
+		TO_FOLLOW, F_BLOCK, ID, UNAME, PROFILE_IMG,RENAME_PROFILE_IMG
+		FROM
+		FOLLOW_LIST
+		JOIN LML_MEM ON (TO_FOLLOW = USER_NUM)
+		WHERE FROM_FOLLOW =
+		#{uNum}
+		AND F_BLOCK = 'N' AND LML_MEM.DEL_FLAG='N'
+
+	</select>
+
+	<select id="selectFollowerList" resultMap="memberResultSet">
+		SELECT TO_FOLLOWER,
+		FROM_FOLLOWER, ID, UNAME, PROFILE_IMG,RENAME_PROFILE_IMG
+		FROM
+		FOLLOW_LIST
+		JOIN LML_MEM ON (FROM_FOLLOWER = USER_NUM)
+		WHERE TO_FOLLOWER= #{uNum} AND LML_MEM.DEL_FLAG='N'
+	</select>
+
+	<select id="selectBlockList" resultMap="memberResultSet">
+		SELECT FROM_FOLLOW,
+		TO_FOLLOW, ID, UNAME, PROFILE_IMG,RENAME_PROFILE_IMG
+		FROM FOLLOW_LIST
+		JOIN LML_MEM ON (TO_FOLLOW = USER_NUM)
+		WHERE FROM_FOLLOW = #{uNum}
+		AND
+		F_BLOCK = 'Y' AND LML_MEM.DEL_FLAG='N'
+	</select>
+
+	<select id="countFollowList" resultType="_int">
+		SELECT COUNT(*)
+		FROM
+		FOLLOW_LIST
+		JOIN LML_MEM ON (TO_FOLLOW = USER_NUM)
+		WHERE FROM_FOLLOW = #{uNum}
+		AND F_BLOCK = 'N' AND LML_MEM.DEL_FLAG='N'
+	</select>
+
+	<select id="countFollowerList" resultType="_int">
+		SELECT COUNT(*)
+		FROM
+		FOLLOW_LIST
+		JOIN LML_MEM ON (FROM_FOLLOWER = USER_NUM)
+		WHERE TO_FOLLOW = #{uNum}
+		AND F_BLOCK = 'N' AND LML_MEM.DEL_FLAG='N'
+	</select>
+
+	<insert id="followBtn" parameterType="Member">
+		INSERT INTO FOLLOW_LIST
+		VALUES(#{from_follow},#{to_follow},#{to_follow},#{from_follow},DEFAULT)
+	</insert>
+
+	<insert id="nInsertMember" parameterType="Member">
+		INSERT INTO LML_MEM
+		VALUES(#{id},#{mail},'',00000000000,0,0,#{gender},#{uname},#{intro},DEFAULT,LML_MEM_SEQ.NEXTVAL,DEFAULT)
+	</insert>
+
+	<delete id="unfollowBtn" parameterType="Member">
+		DELETE FROM FOLLOW_LIST
+		WHERE FROM_FOLLOW = #{from_follow}
+		AND TO_FOLLOW = #{to_follow}
+	</delete>
+
+	<!-- 1113은지 -->
+	<select id="searchUserList1" parameterType="string"
+		resultMap="memberResultSet">
+		SELECT USER_NUM, ID, UNAME, PROFILE_IMG,RENAME_PROFILE_IMG
+		FROM LML_MEM
+		WHERE (ID LIKE LOWER('%' || #{keyword} || '%')
+		OR UNAME LIKE
+		LOWER('%' || #{keyword} || '%'))
+		AND DEL_FLAG='N'
+	</select>
+
+	<select id="searchUserCount" resultType="_int">
+		SELECT COUNT(*)
+		FROM
+		LML_MEM
+		WHERE (ID LIKE LOWER('%' || #{keyword} || '%')
+		OR UNAME LIKE
+		LOWER('%' || #{keyword} || '%'))
+		AND DEL_FLAG='N'
+	</select>
+	<!-- 1113은지 -->
+
+	<update id="deleteMember" parameterType="String">
+		UPDATE LML_MEM SET
+		DEL_FLAG='Y' WHERE ID=#{id}
+
+
+	</update>
+
+	<select id="finduNum" parameterType="String" resultType="integer">
+		SELECT
+		USER_NUM FROM LML_MEM
+		WHERE ID=#{id} AND DEL_FLAG='N'
+	</select>
+
+
+	<select id="finduserPage" parameterType="String"
+		resultMap="memberResultSet">
+		SELECT * FROM LML_MEM
+		WHERE ID=#{id} AND DEL_FLAG='N'
+	</select>
+
+	<select id="messageList" parameterType="String"
+		resultMap="chatRoomResultSet">
+		SELECT
+		chat_room.chatroomid,CHAT_ROOM.TOUSER,lml_mem.RENAME_PROFILE_IMG,CHAT_ROOM.COUNT
+		FROM
+		CHAT_ROOM
+		JOIN LML_MEM ON CHAT_ROOM.TOUSER = LML_MEM.ID
+		WHERE
+		FROMUSER=#{id}
+	</select>
+	<select id="findNamePhone" parameterType="String"
+		resultType="String">
+		SELECT ID FROM LML_MEM
+		WHERE UNAME=#{findname}
+		AND
+		M_PHONE=#{findphone}
+		AND DEL_FLAG='N'
+	</select>
+	<select id="findNameEmail" parameterType="String"
+		resultType="String">
+		SELECT ID FROM LML_MEM
+		WHERE UNAME=#{findname}
+		AND
+		MAIL=#{findEmail}
+		AND DEL_FLAG='N'
+	</select>
+	
+	<select id="chatLog" parameterType="String" resultMap="chatLogResultSet">
+		SELECT * FROM CHAT_RECORD
+		WHERE CHATROOMID=#{chatid}
+		ORDER by CHATDATE
+	</select>
+	
+	
+	<select id="boardCount" parameterType="_int" resultType="_int">
+		SELECT COUNT(*)
+		FROM LML_BOARD
+		WHERE B_USER_NUM=#{uNum} 
+	</select>
+	 
+	 <select id="findRoom" parameterType="String" resultType="String">
+	 	SELECT CHATROOMID 
+	 	FROM CHAT_ROOM
+	 	WHERE FROMUSER=#{fromid} AND TOUSER=#{toid}
+	 </select>
+	 
+	 <insert id="newRoom" parameterType="String">
+	 	INSERT ALL 
+	 	INTO CHAT_ROOM VALUES(#{newroomid},#{fromid},#{toid},DEFAULT)
+	 	INTO CHAT_ROOM VALUES(#{newroomid},#{toid},#{fromid},DEFAULT)
+	 	SELECT * FROM dual
+	 </insert>
+	 <select id="findPwIdEmail" parameterType="String" resultType="_int">
+		SELECT count(*) FROM LML_MEM
+		WHERE ID=#{id}
+	        AND MAIL=#{email}
+	        AND DEL_FLAG='N'
+	</select>
+	<update id="changPwIdEmail" parameterType="String">
+		UPDATE LML_MEM SET
+        UPWD=#{pw}
+        WHERE ID=#{id}
+        AND MAIL=#{email}
+	</update>
+	
+	<select id="recentChat" parameterType="String"
+		resultType="String">
+		SELECT CHATLOG FROM
+		(SELECT * FROM CHAT_RECORD
+		WHERE CHATROOMID=#{chatroomid}
+		ORDER by CHATDATE DESC)
+		WHERE ROWNUM=1
+
+
+	</select>
+	
+	<update id="chatAlram" parameterType="String">
+		UPDATE CHAT_ROOM SET COUNT=COUNT+1 
+		WHERE CHATROOMID=#{roomid} AND TOUSER= #{name}
+	</update>
+	
+	<update id="checkChat" parameterType="String">
+		UPDATE CHAT_ROOM SET COUNT=0
+		WHERE CHATROOMID=#{roomid} AND TOUSER= #{name}
+	</update>
+	
+	<select id="getFollowList" parameterType="Board" resultType="_int">
+		SELECT COUNT(*)
+		FROM FOLLOW_LIST
+		WHERE FROM_FOLLOW = #{from_follow}
+		AND TO_FOLLOW = #{to_follow}
+	</select>
+	
+	<select id="coupleFind" parameterType="_int" resultType="_int">
+		SELECT FROM_FOLLOW AS MAT_FOLL
+FROM FOLLOW_LIST
+WHERE FROM_FOLLOW IN (SELECT TO_FOLLOW
+      FROM
+      FOLLOW_LIST
+      JOIN LML_MEM ON (TO_FOLLOW = USER_NUM)
+      WHERE FROM_FOLLOW =#{uNum}
+      AND F_BLOCK = 'N' AND LML_MEM.DEL_FLAG='N')
+	
+	
+	</select>
+	<delete id="deleteChat" parameterType="String">
+	DELETE FROM CHAT_ROOM
+	WHERE CHATROOMID = #{roomid}
+	</delete>
+	
+	<delete id="deleteChatLog" parameterType="String">
+	DELETE FROM CHAT_RECORD
+	WHERE CHATROOMID = #{roomid}
+	</delete> 
+	<delete id="deleteBoard" parameterType="_int">
+	DELETE FROM LML_BOARD
+	WHERE B_USER_NUM = #{uNum}
+	
+	</delete>
+	<delete id="deleteComment" parameterType="_int">
+	DELETE FROM LML_COMMENT
+	WHERE C_UNUM = #{uNum}
+	
+	</delete>
+	<select id="chatList" parameterType="String" resultMap="chatRoomResultSet">
+	SELECT * FROM CHAT_ROOM
+	WHERE FROMUSER= #{id}
+	</select>
+	
+	<select id="alalarm" parameterType="String" resultType="Integer">
+	SELECT SUM(COUNT) AS ALAL FROM CHAT_ROOM
+	WHERE FROMUSER= #{id}
+	
+	
+	
+	</select>
+	
+	<select id="upGetFollow" parameterType="Member" resultMap="memberResultSet">
+		SELECT *
+		FROM FOLLOW_LIST
+		WHERE FROM_FOLLOW=#{from_follow}
+		AND TO_FOLLOW=#{to_follow}
+	</select>
+	
+	<update id="blockBtn" parameterType="Member">
+		UPDATE FOLLOW_LIST 
+		SET F_BLOCK='Y' 
+		WHERE FROM_FOLLOW=#{from_follow}
+		AND TO_FOLLOW=#{to_follow}
+	</update>
+	
+	<insert id="newBlockBtn" parameterType="Member">
+		INSERT INTO FOLLOW_LIST
+		VALUES(#{from_follow},#{to_follow},#{to_follow},#{from_follow},'Y')
+	</insert>
+	
+	<update id="unBlockBtn" parameterType="Member">
+		DELETE FROM FOLLOW_LIST
+		WHERE FROM_FOLLOW=#{from_follow}
+		AND TO_FOLLOW=#{to_follow}
+	</update>
+	
+	<select id="loginUserFollowList" parameterType="_int" resultType="_int">
+		SELECT TO_FOLLOW
+		FROM FOLLOW_LIST
+		WHERE FROM_FOLLOW=#{loginUserNum}
+	
+	
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
